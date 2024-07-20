@@ -1,3 +1,4 @@
+# NUTRITION APP : 
 from dotenv import load_dotenv
 load_dotenv()
 import streamlit as st
@@ -5,10 +6,10 @@ import os
 import google.generativeai as genai
 from PIL import Image
 
-genai.configure(api_key = os.getenv("AIzaSyDlOHFLmgqFR6GZfdpCbZoAxpT1vgeszfk"))
+genai.configure(api_key = os.getenv("GOOGLE_API_KEY"))
 
 
-##``
+
 def get_gemini_response(input,image,prompt):
     model = genai.GenerativeModel('gemini-pro-vision')
     response = model.generate_content([input,image[0],prompt])
@@ -42,7 +43,7 @@ input_prompt = """you are an expert in nutritionist where you need to see the fo
 """
 
 
-st.set_page_config(page_title = "app")
+st.set_page_config(page_title = "AI Nutritionist App ")
 st.header("ai app")
 input = st.text_input("Input Prompt : ",key ="input")
 uploaded_file = st.file_uploader("choose an image..", type = ["jpg","jpeg","png"])
