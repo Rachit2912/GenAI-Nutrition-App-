@@ -10,7 +10,7 @@ genai.configure(api_key = os.getenv("AIzaSyDlOHFLmgqFR6GZfdpCbZoAxpT1vgeszfk"))
 
 ##``
 def get_gemini_response(input,image,prompt):
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content([input,image[0],prompt])
     return response.text
 
@@ -33,7 +33,7 @@ def input_image_setup(uploaded_file):
 
 
 ## 
-input_prompt = """you are an expert in nutritionist where you need to see the food items from the image and calculate the total calories, also provide the details of every food in below format:
+input_prompt = """you are an expert in nutritionist where you need to see the food items from the image and calculate the estimated and average total calories, also provide the details of every food in below format:
 
 1. Item 1 - no of calories
 2. Item 2 - no of calories
