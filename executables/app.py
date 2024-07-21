@@ -31,7 +31,7 @@ def input_image_setup(uploaded_file):
 
 
 ## 
-input_prompt = """you are an expert in nutritionist where you need to see the food items from the image and calculate the estimated and average total calories and please take the necessary estimates and assumptions but please provdie some estimates of average calories in the given image & also provide the details of every food in below format:
+input_prompt = """you are an expert in nutritionist where you need to see the food items from the image and calculate the estimated and average total calories and please take the necessary estimates and assumptions but please provide some estimates of average calories in the given image & also provide the details of every food in below format:
 
 1. Item 1 - no of calories
 2. Item 2 - no of calories
