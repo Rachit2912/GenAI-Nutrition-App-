@@ -26,7 +26,8 @@ def input_image_setup(uploaded_file):
         ]
         return image_parts
     else:
-        raise FileNotFoundError("no file uploaded")
+        # raise FileNotFoundError("no file uploaded")
+        st.text_input("No file uploaded ")
 
 
 
@@ -41,7 +42,7 @@ input_prompt = """you are an expert in nutritionist where you need to see the fo
 
 
 st.set_page_config(page_title = "AI Nutritionist App ")
-st.header("ai app")
+st.header("Nutrition App")
 input = st.text_input("Input Prompt : ",key ="input")
 uploaded_file = st.file_uploader("choose an image..", type = ["jpg","jpeg","png"])
 image = ""
